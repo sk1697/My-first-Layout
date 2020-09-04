@@ -1,0 +1,91 @@
+:root {
+  --background-color: #8c9eff;
+  --background-body-color: #f5f8fa;
+}
+
+body {
+  margin: 0;
+}
+header,
+aside,
+footer {
+  background-color: var(--background-color);
+}
+
+header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  height: 12vh;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+footer {
+  height: 8vh;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  background-color: var(--background-color);
+  justify-content: space-between;
+  height: 100vh;
+}
+
+aside {
+  width: 10%;
+}
+
+article {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* border: 3px black solid; */
+  border-radius: 1rem;
+  background-color: var(--background-body-color);
+  text-align: center;
+}
+
+.navbar__logo {
+  font-size: 20px;
+  font-family: "Nanum Myeongjo", serif;
+  /* border: 1px solid black; */
+}
+
+.navbar__menu {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  /* border: 1px solid black; */
+  justify-content: center;
+  padding: 10px;
+}
+
+.menuItem {
+  margin: 0 16px;
+  padding: 11px;
+  /* font-style: oblique; 기울기 속성 */
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.navbar__menu div:hover {
+  color: var(--background-color);
+  background-color: white;
+  border: 1px solid white;
+}
+
+.navbar__icons {
+  /* position: absolute; */
+  /* right: 3px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  padding: 0px 25px;
+}
+
+.navbar__icons div {
+  padding: 8px 8px;
+}
