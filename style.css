@@ -3,6 +3,15 @@
   --background-body-color: #f5f8fa;
 }
 
+.ex-Img {
+  display: block;
+  max-width: 400px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
 body {
   margin: 0;
 }
@@ -35,6 +44,7 @@ section {
 
 aside {
   width: 10%;
+  height: 100%;
 }
 
 article {
@@ -68,12 +78,14 @@ article {
   /* font-style: oblique; 기울기 속성 */
   font-weight: 700;
   border-radius: 5px;
+  color: white;
 }
 
 .navbar__menu div:hover {
   color: var(--background-color);
   background-color: white;
   border: 1px solid white;
+  cursor: pointer;
 }
 
 .navbar__icons {
@@ -84,8 +96,90 @@ article {
   justify-content: space-between;
   /* border: 1px solid black; */
   padding: 0px 25px;
+  color: white;
 }
 
 .navbar__icons div {
   padding: 8px 8px;
+}
+
+.dropdown {
+  margin-top: 15px;
+  position: relative;
+  /* border: 1px solid black; */
+  display: inline-block;
+}
+
+.dropBtn {
+  cursor: pointer;
+  color: white;
+  background-color: var(--background-color);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  min-width: 160px;
+}
+
+.dropDown-container {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropDown-container div {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  margin-top: 1px;
+  background-color: var(--background-color);
+  /* border: 1px solid black; */
+}
+
+.dropdown:hover .dropDown-container {
+  display: block;
+  cursor: pointer;
+}
+
+.grid-head-name {
+  margin-top: 20px;
+}
+
+.grid {
+  display: grid;
+  /* grid-template-columns: 40% 60%; */ /* 2열로 40%:60% 정렬 */
+  /* grid-template-columns: 4fr 6fr; */ /* grid gap사용시 scroll 따로 안생겨서  fr를 훨씬많이 씀 */
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: 200px 1fr; */ /* 한쪽 고정하고싶을때 px로 고정 */
+  grid-gap: 1rem;
+  background: lightgray;
+  box-sizing: border-box;
+  /* grid-auto-rows: 100px; */ /* grid하나의 행 높이 결정 */
+  grid-auto-rows: minmax(100px, auto);
+  /* justify-items: center;  */ /* 주축에서 item 위치 */
+  /* align-items: center;  */ /* cross 축에서 item 위치 */
+}
+
+.gi1 {
+  grid-column: 1/4; /* 처음 아이템 왼쪽에서 열로 축을 번호 매김
+  1/4는 1에서 4번축까지 item 표시 */
+}
+.gi4 {
+  justify-self: center;
+  align-items: center;
+}
+
+.gi6 {
+  grid-column: 2;
+  grid-row: 3/5; /* 처음 아이템의 위쪽부터 1로 하여 행만큼 item 표시 */
+}
+.gridItem {
+  background: pink;
+  box-sizing: border-box;
+}
+.gridItemOdd {
+  background: yellow;
+  box-sizing: border-box;
 }
