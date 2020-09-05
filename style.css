@@ -168,7 +168,7 @@ article {
 }
 .gi4 {
   justify-self: center;
-  align-items: center;
+  align-items: center; /* cross 축으로 하나의 item 정렬 */
 }
 
 .gi6 {
